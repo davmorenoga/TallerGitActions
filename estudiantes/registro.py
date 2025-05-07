@@ -25,3 +25,9 @@ def imprimir_tabla(estudiantes):
     for e in lista:
         print(f"{e.nombre.ljust(ancho_nombre)}|{e.nota:>{ancho_nota}.1f}")
         
+def calcular_promedio(estudiantes):
+    if not estudiantes:
+        return 0.0
+    total = sum(e.nota for e in estudiantes)
+    return total / len(estudiantes)
+
